@@ -1,0 +1,22 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "account_id": "ff179fd6f1ff6020cae136d46d74c7f7",
+  "name": "bloom-med-api",
+  "main": "worker.ts",
+  "compatibility_date": "2026-10-11",
+  "compatibility_flags": ["nodejs_compat"],
+  "vars": {
+    "CLERK_ISSUER": "https://rested-tortoise-8756.clerk.accounts.dev",
+    "ALLOWED_ORIGINS": "",
+    "AUTHORIZED_PARTIES": "",
+  },
+  "r2_buckets": [{ "binding": "FILES", "bucket_name": "bloom-med-records" }],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "bloom-med",
+      "database_id": "f73cc656-8215-4bba-9bb1-71846adcc933",
+      "migrations_dir": "migrations",
+    },
+  ],
+}

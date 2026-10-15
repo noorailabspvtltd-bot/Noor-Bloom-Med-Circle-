@@ -1,25 +1,50 @@
 {
   "expo": {
-    "name": "bloom-med",
+    "name": "BLOOM MED",
     "slug": "bloom-med",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/bloom-logo-v2.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.noorailabs.bloommed"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "backgroundColor": "#147D68",
+        "foregroundImage": "./assets/bloom-logo-v2.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "softwareKeyboardLayoutMode": "resize",
+      "package": "com.noorailabs.bloommed"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/bloom-logo-v2.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sharing",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#F6F8FA",
+          "image": "./assets/bloom-logo-v2.png",
+          "imageWidth": 116,
+          "resizeMode": "contain"
+        }
+      ],
+      "@clerk/expo",
+      "expo-secure-store",
+      "expo-web-browser"
+    ],
+    "scheme": "bloommed",
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "1b8258b4-1911-4985-9e16-c82f99c01128"
+      }
+    },
+    "owner": "dominateranc"
   }
 }
